@@ -45,13 +45,13 @@ function getTime(cityVal)
         todayMinutes = today.getMinutes();
         todaySec = today.getSeconds();
 
-        if(timeVarParse < 10)
+        if(todayHours < 10)
         {
             time = time + "0" + todayHours;
         }
         else if (todayHours >= 10)
         {
-            time = time + ":" + todayHours;
+            time = time + todayHours;
         }
 
         if(todayMinutes < 10)
