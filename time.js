@@ -99,7 +99,15 @@ function getTime(cityVal)
                 console.log(apiVar)
                 axios.get(apiVar)
                     .then((res1) => {
-                        document.querySelector(".cityOne").innerText = "Time in " + res1.data[0].name;
+                        if (res1.data[0].name = "")
+                        {
+                            document.querySelector(".cityOne").innerText = "Time in " + timezone;
+
+                        }
+                        else
+                        {
+                            document.querySelector(".cityOne").innerText = "Time in " + res1.data[0].name;
+                        }
                     })
                     .catch((err) => {
                         console.log(err)
